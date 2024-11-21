@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Contenido</title>
+    <link rel="stylesheet" href="../css/principal.css">
+</head>
+<body>
+    <div class="header">
+        <button class="publish-button" onclick="openCreateBlogModal()">Publicar</button>
+        <div class="profile-menu">
+            <button class="profile-button" onclick="toggleProfileMenu()">Ajustes</button>
+            <div id="profile-dropdown" class="profile-dropdown">
+                <a href="perfil.html">Perfil del Usuario</a>
+                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">Modo Oscuro</button>
+            </div>
+        </div>
+    </div>
+    <div class="main-container" id="main-container">
+        <!-- Cuadros para crear blog o página web -->
+        <div class="content-box">
+            <img src="ruta/a/tu/imagen1.jpg" alt="Imagen del contenido">
+            <button onclick="redirectToCreate()">Crear Blog o Página Web</button>
+        </div>
+        <div class="content-box">
+            <img src="ruta/a/tu/imagen2.jpg" alt="Imagen del contenido">
+            <button onclick="redirectToCreate()">Crear Blog o Página Web</button>
+        </div>
+    </div>
+
+    <!-- Modal para subir archivos -->
+    <div id="publishModal" class="modal">  
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Subir Hilo</h2>
+            <textarea id="postText" placeholder="Escribe tu hilo aquí..."></textarea>
+            <input type="file" id="fileInput" multiple>
+            <button onclick="publishContent()">Publicar</button>
+        </div>
+    </div>
+
+    <!-- Modal para crear un blog -->
+    <div id="createBlogModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCreateBlogModal()">&times;</span>
+            <h2>Crear Blog</h2>
+            <input type="text" id="blogTitle" placeholder="Título del Blog">
+            <textarea id="blogText" placeholder="Escribe tu blog aquí..."></textarea>
+            <input type="file" id="blogImage" multiple>
+            <button onclick="publishBlog()">Publicar Blog</button>
+        </div>
+    </div>
+
+    <script src="../js/principal.js"></script>
+</body>
+</html>
