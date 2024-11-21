@@ -3,33 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Sesión</title>
+    <title>Inicio de Sesiï¿½n</title>
     <link rel="stylesheet" href="../css/inicio.css">
 </head>  
 <body>
     <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">Modo Oscuro</button>
     <div class="login-container">
-        <h1>Inicio de Sesión</h1>
+        <h1>Inicio de Sesiï¿½n</h1>
 
 
         <div class="social-login">
             <button class="google-login" onclick="googleLogin()">
                 <img src="../img/google-icon.png" alt="Google">
-                Iniciar sesión con Google
+                Iniciar sesiï¿½n con Google
             </button>
             <button class="facebook-login" onclick="facebookLogin()">
                 <img src="../img/facebook-icon.png" alt="Facebook">
-                Iniciar sesión con Facebook
+                Iniciar sesiï¿½n con Facebook
             </button>
             
         <input type="text" id="username" placeholder="Usuario" required>
-        <input type="password" id="password" placeholder="Contraseña" required>
+        <input type="password" id="password" placeholder="Contraseï¿½a" required>
         <div class="button-container">
             <button class="accept" onclick="login()">Aceptar</button>
             <button class="exit" onclick="window.location.href='registrar.html'">Registrar</button>
         </div>
         <div class="extra-options">
-            <a href="#">Olvidé mi contraseña</a>
+            <a href="#">Olvidï¿½ mi contraseï¿½a</a>
             <label for="remember-username">
                 <input type="checkbox" name="remember" id="remember-username">
                 Recordar usuario
@@ -37,12 +37,12 @@
         </div>
     </div>
 
-    <!-- Modal para solicitar el correo electrónico -->
+    <!-- Modal para solicitar el correo electrï¿½nico -->
     <div id="forgot-password-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Recuperar Contraseña</h2>
-            <input type="email" id="email" placeholder="Ingrese su correo electrónico" required>
+            <h2>Recuperar Contraseï¿½a</h2>
+            <input type="email" id="email" placeholder="Ingrese su correo electrï¿½nico" required>
             <button onclick="sendPassword()">Enviar</button>
         </div>
     </div>
