@@ -1,19 +1,52 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="../css/inicio.css">
+</head>  
+<body>
+    <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">Modo Oscuro</button>
+    <div class="login-container">
+        <h1>Inicio de Sesión</h1>
 
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Welcome to Spring Web MVC project</title>
-    </head>
 
-    <body>
-        <p>Hello! This is the default welcome page for a Spring Web MVC project.</p>
-        <p><i>To display a different welcome page for this project, modify</i>
-            <tt>index.jsp</tt> <i>, or create your own welcome page then change
-                the redirection in</i> <tt>redirect.jsp</tt> <i>to point to the new
-                welcome page and also update the welcome-file setting in</i>
-            <tt>web.xml</tt>.</p>
-    </body>
+        <div class="social-login">
+            <button class="google-login" onclick="googleLogin()">
+                <img src="../img/google-icon.png" alt="Google">
+                Iniciar sesión con Google
+            </button>
+            <button class="facebook-login" onclick="facebookLogin()">
+                <img src="../img/facebook-icon.png" alt="Facebook">
+                Iniciar sesión con Facebook
+            </button>
+            
+        <input type="text" id="username" placeholder="Usuario" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <div class="button-container">
+            <button class="accept" onclick="login()">Aceptar</button>
+            <button class="exit" onclick="window.location.href='registrar.html'">Registrar</button>
+        </div>
+        <div class="extra-options">
+            <a href="#">Olvidé mi contraseña</a>
+            <label for="remember-username">
+                <input type="checkbox" name="remember" id="remember-username">
+                Recordar usuario
+            </label>
+        </div>
+    </div>
+
+    <!-- Modal para solicitar el correo electrónico -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Recuperar Contraseña</h2>
+            <input type="email" id="email" placeholder="Ingrese su correo electrónico" required>
+            <button onclick="sendPassword()">Enviar</button>
+        </div>
+    </div>
+
+    <script src="../js/inicio.js"></script>
+</body>
 </html>
